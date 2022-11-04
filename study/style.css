@@ -1,0 +1,124 @@
+body {
+  background-color: #222;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.guide {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.guide p {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightcoral;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:nth-of-type(2) {
+  background: lightskyblue;
+}
+.box:nth-of-type(3) {
+  background: lightseagreen;
+}
+.box:nth-of-type(4) {
+  background: lightsalmon;
+}
+.box:nth-of-type(5) {
+  background: lightslategray;
+}
+.box:nth-of-type(6) {
+  background: lightsteelblue;
+}
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+.tab span {
+  padding: 5px 10px;
+  border: 2px solid #0474ea;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+.tab span.on {
+  background: #0474ea;
+  color: #fff;
+}
+.code {
+  margin-top: 10px;
+  border-top: 4px solid #ddd;
+  font-size: 13px;
+}
+
+/* =====================================
+===================================== */
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper.type02 {
+  height: 100px;
+  justify-content: center;
+}
+.wrapper.type02 .box {
+  height: auto;
+}
+.wrapper.type04 {
+  height: 200px;
+  justify-content: space-between;
+}
+.wrapper.type04 .box:nth-of-type(2) {
+  align-self: center;
+}
+.wrapper.type04 .box:nth-of-type(3) {
+  align-self: flex-end;
+}
+.wrapper.type05 {
+  justify-content: space-between;
+}
+.wrapper.type05 .box:nth-of-type(1) {
+  order: 1;
+}
+.wrapper.type05 .box:nth-of-type(3) {
+  order: -1;
+}
+.wrapper.type07 {
+  height: 400px;
+  flex-wrap: wrap;
+}
+.wrapper.type07 .box {
+  width: 25%;
+}
+.wrapper.type08 .box {
+  width: 200px;
+}
+.wrapper.type08 .box:nth-of-type(1) {
+  flex-shrink: 3;
+}
+.wrapper.type09 .box {
+  width: 100px;
+}
+.wrapper.type09 .box:nth-of-type(2) {
+  flex-grow: 2;
+}

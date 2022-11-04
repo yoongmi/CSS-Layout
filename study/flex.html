@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>css guide demo</h1>
+    <div class="guide">
+      <p>justify-content</p>
+      <div class="demo_box">
+        <div class="wrapper type01">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+      <div class="tab type01">
+        <span onclick="styleclick(this,'type01','justify-content','center')"
+          >center</span
+        >
+        <span
+          onclick="styleclick(this,'type01','justify-content','space-between')"
+          >space-between</span
+        >
+        <span
+          onclick="styleclick(this,'type01','justify-content','space-around')"
+          >space-around</span
+        >
+        <span
+          onclick="styleclick(this,'type01','justify-content','space-evenly')"
+          >space-evenly</span
+        >
+        <span onclick="styleclick(this,'type01','justify-content','start')"
+          >start</span
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>align-items</p>
+      <div class="demo_box">
+        <div class="wrapper type02">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+      <div class="tab type02">
+        <span onclick="styleclick(this,'type02','align-items','stretch')"
+          >stretch</span
+        >
+        <span onclick="styleclick(this,'type02','align-items','center')"
+          >center</span
+        >
+        <span onclick="styleclick(this,'type02','align-items','start')"
+          >start</span
+        >
+        <span onclick="styleclick(this,'type02','align-items','end')">end</span>
+      </div>
+    </div>
+    <div class="guide">
+      <p>flex-direction</p>
+      <div class="demo_box">
+        <div class="wrapper type03">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+      <div class="tab type03">
+        <span onclick="styleclick(this,'type03','flex-direction','column')"
+          >column</span
+        >
+        <span onclick="styleclick(this,'type03','flex-direction','row')"
+          >row</span
+        >
+        <span
+          onclick="styleclick(this,'type03','flex-direction','column-reverse')"
+          >column-reverse</span
+        >
+        <span onclick="styleclick(this,'type03','flex-direction','row-reverse')"
+          >row-reverse</span
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>align-self : center, flex-end</p>
+      <div class="demo_box">
+        <div class="wrapper type04">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+    </div>
+    <div class="guide">
+      <p>order</p>
+      <div class="demo_box">
+        <div class="wrapper type05">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+        </div>
+      </div>
+    </div>
+    <div class="guide">
+      <p>flex-wrap</p>
+      <div class="demo_box">
+        <div class="wrapper type06">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+        </div>
+      </div>
+      <div class="tab type06">
+        <span onclick="styleclick(this,'type06','flex-wrap','nowrap')"
+          >nowrap</span
+        >
+        <span onclick="styleclick(this,'type06','flex-wrap','wrap')">wrap</span>
+        <span onclick="styleclick(this,'type06','flex-wrap','wrap-reverse')"
+          >wrap-reverse</span
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>align-content</p>
+      <div class="demo_box">
+        <div class="wrapper type07">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+        </div>
+      </div>
+      <div class="tab type07">
+        <span onclick="styleclick(this,'type07','align-content','flex-start')"
+          >flex-start</span
+        >
+        <span onclick="styleclick(this,'type07','align-content','flex-end')"
+          >flex-end</span
+        >
+        <span onclick="styleclick(this,'type07','align-content','space-around')"
+          >space-around</span
+        >
+        <span
+          onclick="styleclick(this,'type07','align-content','space-between')"
+          >space-between</span
+        >
+        <span onclick="styleclick(this,'type07','align-content','center')"
+          >wrap</span
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>flex-shrink : 공간이 없어 줄어들때, 배로 줄어듬.</p>
+      <div class="demo_box">
+        <div class="wrapper type08">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+
+      <div class="code">
+        <pre>
+.box:nth-of-type(1) {
+    flex-shrink: 3;
+}   
+        </pre>
+      </div>
+    </div>
+    <div class="guide">
+      <p>flex-grow : 공간이 남았을때, 공간을 배로 채워줌.</p>
+      <div class="demo_box">
+        <div class="wrapper type09">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div>
+
+      <div class="code">
+        <pre>
+  .box:nth-of-type(2) {
+      flex-grow: 2;
+  }   
+          </pre
+        >
+      </div>
+    </div>
+
+    <script>
+      function styleclick(item, box, style, value) {
+        const wrap = document.querySelector(".wrapper." + box);
+        const tab = document
+          .querySelector(".tab." + box)
+          .querySelectorAll("span");
+        wrap.style.cssText = `${style}:${value}`;
+        tab.forEach((box) => box.classList.remove("on"));
+        item.classList.add("on");
+      }
+    </script>
+  </body>
+</html>
