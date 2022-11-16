@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>grid guide</h1>
+    <div class="guide">
+      <p>grid-template</p>
+      <div class="grid_demo">
+        <div class="father type01">
+          <div class="child">1</div>
+          <div class="child">2</div>
+          <div class="child">3</div>
+          <div class="child">1</div>
+          <div class="child">2</div>
+          <div class="child">3</div>
+          <div class="child">1</div>
+          <div class="child">2</div>
+          <div class="child">3</div>
+        </div>
+      </div>
+      <div class="code">
+        <pre>
+.father {
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 100px 150px 200px;
+    column-gap: 5px;
+    row-gap: 20px;
+}
+          </pre
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>grid-area</p>
+      <div class="grid_demo">
+        <div class="father type02">
+          <div class="child header">header</div>
+          <div class="child content">content</div>
+          <div class="child nav">nav</div>
+          <div class="child footer">footer</div>
+        </div>
+      </div>
+      <div class="code">
+        <pre>
+.father.type02 .header {
+    grid-area: header;
+}
+.father {
+    grid-template-areas: "header header header header" "content content content nav" "content content content nav" "footer footer footer footer";
+}
+            </pre
+        >
+      </div>
+    </div>
+    <div class="guide">
+      <p>grid-area</p>
+      <div class="grid_demo">
+        <div class="father type03">
+          <div class="child header2">header</div>
+          <div class="child content2">content</div>
+          <div class="child nav2">nav</div>
+          <div class="child footer2">footer</div>
+        </div>
+      </div>
+      <div class="code">
+        <pre></pre>
+      </div>
+    </div>
+    <script>
+      function styleclick(item, box, style, value) {
+        const wrap = document.querySelector(".wrapper." + box);
+        const tab = document
+          .querySelector(".tab." + box)
+          .querySelectorAll("span");
+        wrap.style.cssText = `${style}:${value}`;
+        tab.forEach((box) => box.classList.remove("on"));
+        item.classList.add("on");
+      }
+    </script>
+  </body>
+</html>
