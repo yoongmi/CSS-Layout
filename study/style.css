@@ -189,8 +189,7 @@ h1 {
   grid-template-rows: repeat(4, 100px);
 }
 .father.type03 .header2 {
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: span 4;
 }
 .father.type03 .content2 {
   grid-column-start: 1;
@@ -203,6 +202,34 @@ h1 {
   grid-row-end: 4;
 }
 .father.type03 .footer2 {
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: 1/-1;
+}
+
+.father.type04 {
+  gap: 5px;
+  height: 50vh;
+  grid-template:
+    [header-start] "header header header header " 1fr [header-end]
+    [content-start] "content content content nav" 2fr [content-end]
+    [footer-start] "footer footer footer footer " 1fr [footer-end];
+}
+.father.type04 .header3 {
+  grid-area: header;
+}
+.father.type04 .content3 {
+  grid-area: content;
+}
+.father.type04 .nav3 {
+  grid-area: nav;
+}
+.father.type04 .footer3 {
+  grid-area: footer;
+}
+
+.father.type05 {
+  height: 50vh;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center end;
 }

@@ -69,7 +69,57 @@
         </div>
       </div>
       <div class="code">
-        <pre></pre>
+        <pre>
+.father .header2 {
+  grid-column: span 4; // 공간4개를 차지한다는 뜻.
+}
+.father.type03 .nav2 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.father .footer2 {
+  grid-column: 1/-1; // -1은 맨 마지막.
+}
+        </pre>
+      </div>
+    </div>
+    <div class="guide">
+      <p>Grid Template</p>
+      <div class="grid_demo">
+        <div class="father type04">
+          <div class="child header3">1fr</div>
+          <div class="child content3">1fr</div>
+          <div class="child nav3">1fr</div>
+          <div class="child footer3">1fr</div>
+        </div>
+      </div>
+      <div class="code">
+        <pre>
+.father {
+  grid-template:
+    [header-start] "header header header header " 1fr [header-end]
+    [content-start] "content content content nav" 2fr [content-end]
+    [footer-start] "footer footer footer footer " 1fr [footer-end];
+}
+        </pre>
+      </div>
+    </div>
+    <div class="guide">
+      <p>Grid Template</p>
+      <div class="grid_demo">
+        <div class="father type05">
+          <div class="child header2">header</div>
+          <div class="child content2">content</div>
+          <div class="child nav2">nav</div>
+          <div class="child footer2">footer</div>
+        </div>
+      </div>
+      <div class="code">
+        <pre>
+align-items: center; // 수직
+justify-items: end; // 수평
+/* place-items: center end; //수직 수평 */
+        </pre>
       </div>
     </div>
     <script>
