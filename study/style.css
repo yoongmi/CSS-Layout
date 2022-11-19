@@ -233,3 +233,44 @@ h1 {
   grid-template-rows: repeat(4, 1fr);
   place-items: center end;
 }
+
+.father.type06 {
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+}
+.father.type06 .header2 {
+  place-self: start end;
+}
+.father .item {
+  background-color: #0474ea;
+}
+.father .item:nth-child(odd) {
+  background-color: #2ecc71;
+}
+
+.father.type07 {
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(50px, 150px));
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-columns: 100px;
+}
+
+.father {
+  gap: 5px;
+  grid-template-rows: repeat(2, 100px);
+}
+.father.grid1 {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.father.grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.father.grid3 {
+  grid-template-columns: max-content min-content;
+  grid-auto-rows: 100px;
+}
