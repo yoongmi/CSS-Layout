@@ -8,7 +8,23 @@ h1 {
   color: #fff;
   text-align: center;
 }
-
+h2 {
+  font-size: 24px;
+  text-align: center;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+h3 a,
+h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+h3 a:hover,
+h2 a:hover {
+  color: #999;
+}
 .guide {
   width: 90%;
   margin: 0 auto;
